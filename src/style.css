@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.topImage{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding: 5px;
+}
+.navbar{
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.navItem{
+    margin:8px 10px;
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+}
+ 
+#loginBtn{
+    color: blue;
+    background: white;
+    font-weight:600;
+    cursor: pointer;
+    border: none;
+}
+#search {
+    width: 300px;
+}
+
+header{
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+.cart{
+    position: relative;
+}
+.cartAmount{
+    position: absolute;
+    top: 4px;
+    left: 38px;
+    background-color: red;
+    padding: 0 3px;
+    border-radius: 3px;
+    color:white;
+}
+.parentForBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+.topBox{
+    cursor: pointer;
+}
+.topImage img{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+.shop{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3%;
+    gap: 10px;
+}
+.item{
+    padding: 4%;
+    margin: 0 auto;
+}
+.item:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+.details{
+    padding: 4%;
+}
+.amountAndAddtoCart{
+    display: flex;
+    justify-content: space-between;
+}
+.addToCart{
+    background-color:#ff9f00 ;
+    color: white;
+    border-radius: 3px;
+    padding: 2%;
+    cursor: pointer;
+    border: none;
+}
+.addToCart:hover{
+    background-color: #f8c26b;
+}
+.addToCart:active{
+    scale: 0.9;
+    transition: 0.4s;
+}
+
+
+@media (max-width:612px){
+    .parentForBox{
+        width: 80%;
+    }
+    #loginBtn{
+        display: none;
+    }
+    #search{
+        width: 200px;
+    }
+}
+@media (max-width:500px){
+    .item{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
