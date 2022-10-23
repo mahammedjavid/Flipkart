@@ -30,7 +30,7 @@ let shopItem = [{
     price : 450,
     desc : "Striped Men Round Neck Yellow T-Shirt",
     fulldes : " Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, iste quisquam commodi sapiente fugiat quidem harum quae quasi natus qui.",
-    img : "images/mensfashionfour.webp",
+    img : "images/mensfashionFour.webp"
 }
 ]
 
