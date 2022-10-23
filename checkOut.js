@@ -20,7 +20,7 @@ let generateSingleProductShop = () => {
 
             return `
                  <div class="first">
-                    <img src="../${search.img}" alt="" width="250px" height="250px">
+                    <img src="./${search.img}" alt="" width="250px" height="250px">
                     <div class="singleProductdetails">
                         <h3>${search.topName}</h3>
                         <h4>${search.name}</h4><br>
