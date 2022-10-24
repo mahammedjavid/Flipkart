@@ -22,11 +22,11 @@ let generateSingleProductShop = () => {
                  <div class="first">
                     <img src="./${search.img}" alt="" width="250px" height="250px">
                     <div class="singleProductdetails">
-                        <h3>${search.topName}</h3>
-                        <h4>${search.name}</h4><br>
+                        <h3>${search.topName}</h3><br>
+                        <h4>Price : <i class="fa fa-rupee">${search.price}</i><br><br></h4>
                         <p>${search.fulldes}</p><br><br>
                         <div class="lastpartflex">
-                            <i class="fa fa-rupee">${search.price}</i><br>
+                            <h4>Total Amount : <i class="fa fa-rupee">${search.price * x.item}</i></h4><br>
                             <div class="buttons">
                                 <i class="bi bi-plus-lg" onclick = "increment(${x.id})"></i>
                                 <div id = ${x.id} class="qty">${x.item}</div>
@@ -58,9 +58,9 @@ let increment = (id) => {
     
     search.item +=1 
 
-    localStorage.setItem("data",JSON.stringify(basket))
     update(selectedID)
-    calculation()
+    generateSingleProductShop()
+    localStorage.setItem("data",JSON.stringify(basket))
 
 }
 let decrement = (id) => {
@@ -77,13 +77,38 @@ let decrement = (id) => {
     basket = basket.filter((x)=>x.item!==0)
     generateSingleProductShop()
     localStorage.setItem("data",JSON.stringify(basket))
-    calculation()   
 }
 
 let update = (id) => {
     let search = basket.find((x)=>x.id === id)
     let qty = document.getElementById(id)
     qty.innerHTML = search.item
+    calculation()
+    TotalCartAmount()
+}
+
+let TotalCartAmount = () => {
+    if(basket.length !==0){
+        let amount = basket.map((x)=>{
+        let search = shopItem.find((y)=>y.id ===x.id) || []
+        return x.item * search.price 
+        }).reduce((x,y)=> x+y,0)
+
+        // console.log(amount)
+        label.innerHTML = `
+            <h2>Total Bill : &#8377; ${amount}</h2>
+            <button onclick = "clear()" class="clear">Clear Cart</button>
+        `
+    }
+    
+    else{
+        return
+    }
+}
+TotalCartAmount()
+
+let clear = () => {
+    console.log('clear')
 }
 
 
