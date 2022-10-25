@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
 }
+
 .topImage{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     padding: 5px;
@@ -79,13 +81,16 @@ header{
 }
 .item{
     padding: 4%;
-    margin: 0 auto;
 }
 .item:hover{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 20px;
 }
 .details{
     padding: 4%;
+}
+.details p{
+    width: 250px;
 }
 .amountAndAddtoCart{
     display: flex;
@@ -110,8 +115,58 @@ header{
 .hide{
     display: none;
 }
+/* Footer */
+.gridParent{
+    color: white;
+    background-color:#172337;
+    margin: 2% 0 0 0;
+    display: grid;
+    padding: 30px;
+    font-size: 11px;
+    grid-template-columns: 15% 15% 15% 11% 22% 22%;
+    justify-content: center;
+}
+.column p{
+    padding: 8px 0;
+}
+.column span{
+    display: block;
+    padding: 0 0 20px 0;
+    color: #878787;
+}
+.column.mail{
+    padding-left: 30px;
+    border-left:1px solid white;
+}
+.navigationBtn p{
+    cursor: pointer;
+}
+.navigationBtn p:hover{
+    text-decoration: underline;
+}
 
 
+@media (max-width:680px){
+    .gridParent{
+        grid-template-columns: repeat(4,25%);
+        padding: 20px;
+    }
+    #mail{
+        border-right: none;
+        padding-top: 5%;
+        display: block;
+        width: 100%;
+    }
+    #adress{
+        padding-top: 5%;
+        display: block;
+        width: 250%;
+    }
+    .item {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
 @media (max-width:612px){
     .parentForBox{
         width: 80%;
