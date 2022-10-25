@@ -17,12 +17,11 @@ let generateSingleProductShop = () => {
         return shop1.innerHTML = basket.map((x)=>{   //only id and item are in basket so get data rom data.js using id
             let search = shopItem.find((y) => y.id === x.id) || []  //if we find something return html if not return empty arr
 
-
             return `
                  <div class="first">
                     <img src="./${search.img}" alt="" width="250px" height="250px">
                     <div class="singleProductdetails">
-                        <h3>${search.topName}</h3><br>
+                        <h3>${search.name}</h3><br>
                         <h4>Price : <i class="fa fa-rupee">${search.price}</i><br><br></h4>
                         <p>${search.fulldes}</p><br><br>
                         <div class="lastpartflex">
@@ -34,7 +33,8 @@ let generateSingleProductShop = () => {
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
+                <hr> 
             `
         })
     }
@@ -97,7 +97,7 @@ let TotalCartAmount = () => {
         // console.log(amount)
         label.innerHTML = `
             <h2>Total Bill : &#8377; ${amount}</h2>
-            <button onclick = "clear()" class="clear">Clear Cart</button>
+            <button onclick = "clearAllCart();" class="clear">Clear Cart</button>
         `
     }
     
@@ -107,8 +107,10 @@ let TotalCartAmount = () => {
 }
 TotalCartAmount()
 
-let clear = () => {
-    console.log('clear')
+let clearAllCart = () => {
+    basket = []
+    generateSingleProductShop()
+    localStorage.setItem("data",JSON.stringify(basket))
 }
 
 

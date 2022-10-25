@@ -89,6 +89,7 @@ header{
 }
 .amountAndAddtoCart{
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .addToCart{
@@ -105,6 +106,9 @@ header{
 .addToCart:active{
     scale: 0.9;
     transition: 0.4s;
+}
+.hide{
+    display: none;
 }
 
 

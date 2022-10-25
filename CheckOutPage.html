@@ -38,7 +38,8 @@
             align-items: center;
         }
         .singleProductdetails{
-            margin-left: 5%;
+            margin-left: 15%;
+            width: 60%;
         }
         .lastpartflex{
             display: flex;
@@ -52,9 +53,9 @@
             padding: 2px;
         }
         .bi{
-            padding: 3px;
+            padding: 1px;
             cursor: pointer;
-            border-radius: 30px;
+            border-radius: 50px;
             border: 1px solid gray; 
         }
         .qty{
@@ -102,9 +103,18 @@
             .first img{
                 margin-bottom: 5%;
             }
+            .lastpartflex{
+                flex-direction: column;
+            }
+            .singleProductdetails{
+                width: 90%;
+                margin-left: 5%;
+            }
         }
     </style>
-    <div class="label"></div>
+    <div class="label">
+        <!-- <button onclick="clear()" class="clear" id="clear">Clear Cart</button> -->
+    </div>
 
 
     <div class="single" id="singleproduct">
