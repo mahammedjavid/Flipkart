@@ -9,6 +9,10 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     padding: 5px;
 }
+.item img{
+    width :240px; 
+    height:250px;
+}
 .navbar{
     background-color: blue;
     display: flex;
@@ -78,9 +82,11 @@ header{
     margin: 0 auto;
     margin-top: 3%;
     gap: 10px;
+    align-items: center;
 }
 .item{
     padding: 4%;
+    text-align: center;
 }
 .item:hover{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
@@ -88,6 +94,7 @@ header{
 }
 .details{
     padding: 4%;
+    text-align: start;
 }
 .details p{
     width: 250px;
@@ -171,11 +178,8 @@ header{
     .parentForBox{
         width: 80%;
     }
-    #loginBtn{
-        display: none;
-    }
     #search{
-        width: 200px;
+        width: 120px;
     }
 }
 @media (max-width:500px){
@@ -184,5 +188,21 @@ header{
         justify-content: center;
         align-items: center;
 
+    }
+}
+@media (max-width:402px){
+    .navItem{
+        margin:5px 1px;
+        padding: 5px 7px;
+    }
+    .item img {
+        width: 200px;
+        height: 180px;
+    }
+    .details p{
+    width: 200px;
+    }
+    .item{
+        font-size: 14px;
     }
 }

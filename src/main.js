@@ -7,7 +7,7 @@ let generateShop = () => {
     return (shop.innerHTML = shopItem.map((x)=>{
         return `
     <div class="${x.categoty} item" id = ${x.id}>
-                    <img src="./${x.img}" alt="" width="250px" height="250px">
+                    <img src="./${x.img}" alt="">
                     <div class="details">
                         <h3 class="productName">${x.name}</h3>
                         <p>${x.desc}</p>
