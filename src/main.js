@@ -62,7 +62,7 @@ search.addEventListener('click',()=>{
     // looping throgh all the elements
 
     product_Name.forEach((elem,index) => {
-        if(elem.innerText.includes(searchInput.toUpperCase())){
+        if(elem.innerText.toUpperCase().includes(searchInput.toUpperCase())){
             items[index].classList.remove('hide')
         }
         else {
