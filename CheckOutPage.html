@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+        integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="src/style.css">
     <title>CheckOut</title>
 </head>
+
 <body>
     <style>
 
@@ -21,7 +23,7 @@
                 <img id="logo" class="navItem" src="./images/logo.png" width="100px" height="30px">
             </a>
             <input type="search" name="" id="search" class="navItem" placeholder="Search for Products brands and more">
-            <button id="loginBtn" class="navItem">Login</button>
+            <button id="loginBtn" class="navItem">Search</button>
             <a href="CheckOutPage.html">
                 <div class="cart">
                     <i class="navItem  fa fa-shopping-cart" style="color: white;" id="cart"></i>
@@ -31,55 +33,64 @@
         </div>
     </header>
     <style>
-        .first{
+        .first {
             display: flex;
             padding: 5%;
             margin: 0 auto;
             align-items: center;
         }
-        .singleProductdetails{
+
+        .singleProductdetails {
             margin-left: 15%;
             width: 60%;
         }
-        .lastpartflex{
+
+        .lastpartflex {
             display: flex;
             justify-content: space-between;
-            
+
         }
-        .buttons{
+
+        .buttons {
             display: flex;
             font-size: 20px;
             gap: 8px;
             padding: 2px;
         }
-        .bi{
+
+        .bi {
             padding: 1px;
             cursor: pointer;
             border-radius: 50px;
-            border: 1px solid gray; 
+            border: 1px solid gray;
         }
-        .qty{
+
+        .qty {
             padding: 3px;
             border-radius: 5px;
-            border: 1px solid gray; 
+            border: 1px solid gray;
         }
-        .fa{
+
+        .fa {
             font-size: 20px;
         }
-        .label{
+
+        .label {
             text-align: center;
             padding-top: 5%;
         }
-        .backToShop{
+
+        .backToShop {
             margin-top: 5%;
             padding: 1% 3%;
             cursor: pointer;
             border-radius: 5px;
-            border:none;
+            border: none;
             background-color: blue;
             color: white;
         }
-        .clear{
+
+        .clear {
             border: none;
             margin: 5px 0;
             padding: 10px;
@@ -88,26 +99,31 @@
             color: white;
             cursor: pointer;
         }
-        .clear:hover{
+
+        .clear:hover {
             background-color: rgb(247, 69, 69);
         }
-        .clear:active{
+
+        .clear:active {
             scale: 0.95;
             transition: 0.8s;
         }
 
 
-        @media (max-width:540px){
-            .first{
+        @media (max-width:540px) {
+            .first {
                 flex-direction: column;
             }
-            .first img{
+
+            .first img {
                 margin-bottom: 5%;
             }
-            .lastpartflex{
+
+            .lastpartflex {
                 flex-direction: column;
             }
-            .singleProductdetails{
+
+            .singleProductdetails {
                 width: 90%;
                 margin-left: 5%;
             }
@@ -175,44 +191,42 @@
             <div class="column" id="mail">
                 <span>Mail Us</span>
                 <p>Flipkart Internet Private Limited,
-    
+
                     Buildings Alyssa, Begonia &
-    
+
                     Clove Embassy Tech Village,
-    
+
                     Outer Ring Road, Devarabeesanahalli Village,
-    
+
                     Bengaluru, 560103,
-    
+
                     Karnataka, India</p>
             </div>
             <div class="column" style="padding-left:20px ;" id="adress">
                 <span>Registed Office Address</span>
                 <p>Flipkart Internet Private Limited,
-    
+
                     Buildings Alyssa, Begonia &
-    
+
                     Clove Embassy Tech Village,
-    
+
                     Outer Ring Road, Devarabeesanahalli Village,
-    
+
                     Bengaluru, 560103,
-    
+
                     Karnataka, India
-    
+
                     CIN : U51109KA2012PTC066107
-    
+
                     Telephone: 044-45614700</p>
-    
+
             </div>
         </div>
     </footer>
 
     <script src="./data.js"></script>
     <script src="./checkOut.js"></script>
-    
+
 </body>
+
 </html>
-
-
-
